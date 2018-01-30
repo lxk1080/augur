@@ -1,6 +1,6 @@
-# sell
+# augur
 
-> sell app
+> augur page
 
 ## Build Setup
 
