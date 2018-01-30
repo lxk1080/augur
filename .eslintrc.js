@@ -24,7 +24,7 @@ module.exports = {
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
     // 使eslint验证要有分号
-    'semi': ['error', 'always'],
+    // 'semi': ['error', 'always'],
     // 忽略缩进设置（使用webstorm的默认格式化代码）
     'indent': 0,
     'space-before-function-paren': 0,
