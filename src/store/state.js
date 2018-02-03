@@ -4,7 +4,8 @@
 import { animals } from 'common/js/config'
 
 const state = {
-  animal: animals[0]
+  animal: animals[0],
+  username: ''
 }
 
 export default state

@@ -50,14 +50,20 @@
       background-repeat no-repeat
     &.star-48
       .star-item
-        width 20px
-        height 20px
         margin-right 10px
-        background-size 20px 20px
         &:last-child
           margin-right 0
         &.on
           bg-image('star48_on')
         &.off
           bg-image('star48_off')
+        @media (-webkit-min-device-pixel-ratio: 1.5),(min-device-pixel-ratio: 1.5)
+            width 20px
+            height 20px
+            background-size 20px 20px
+        @media (-webkit-min-device-pixel-ratio: 2),(min-device-pixel-ratio: 2)
+          width 26px
+          height 26px
+          background-size 26px 26px
+
 </style>

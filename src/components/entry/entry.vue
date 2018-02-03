@@ -42,8 +42,8 @@
   export default {
     data() {
       return {
-        username: '',
-        selected: ''
+        selected: '',
+        username: ''
       }
     },
     computed: {
@@ -53,7 +53,8 @@
     },
     methods: {
       ...mapMutations({
-        setAnimal: 'SET_ANIMAL'
+        setAnimal: 'SET_ANIMAL',
+        setUsername: 'SET_USERNAME'
       }),
       gotoPage() {
         if (!this.username || !this.selected) {
@@ -61,6 +62,7 @@
           return
         }
         this.setAnimal(this.getAnimalObj(this.selected))
+        this.setUsername(this.username)
         this.$router.push({
           path: '/result'
         })

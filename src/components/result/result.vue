@@ -8,7 +8,7 @@
         </div>
         <div class="img-wrapper">
           <img class="headpic" src="./head.png" width="60" height="60" alt="headPng">
-          <span class="nickname">朱丽叶的传说</span>
+          <span class="nickname">{{username}}</span>
         </div>
         <!--分数展示-->
         <div class="score-box">
@@ -32,12 +32,12 @@
       <!--二维码-->
       <div class="code-wrapper">
         <div class="text-wrapper">
-          <p class="text-top">来这里测试</p>
-          <p class="text-bottom">你的运势</p>
+          <p class="text-top">测运势就在公众号</p>
+          <p class="text-bottom">鲜辣财经</p>
           <div class="triangle"><!--三角箭头--></div>
         </div>
         <div class="img-wrapper">
-          <img src="./code.png" width="80" height="80" alt="codePng">
+          <img class="img" src="./code.png" alt="codePng">
         </div>
       </div>
     </div>
@@ -51,7 +51,8 @@
   export default {
     computed: {
       ...mapGetters([
-        'animal'
+        'animal',
+        'username'
       ])
     },
     components: {
@@ -81,6 +82,8 @@
       overflow hidden
       .header
         margin-top 12%
+        @media (-webkit-max-device-pixel-ratio: 2),(max-device-pixel-ratio: 2)
+          margin-top 8%
         margin-bottom 8%
         text-align center
         .text
@@ -94,23 +97,26 @@
         .nickname
           display block
           margin 4% auto 0
-          font-size 12px
+          font-size 14px
+          color #000
       .score-box
-        margin-top 12%
+        margin-top 10%
+        @media (-webkit-max-device-pixel-ratio: 1.8),(max-device-pixel-ratio: 1.8)
+          margin-top 5%
         .score-wrapper
           margin-bottom 20px
           text-align center
           font-size 0
           .title
             display inline-block
-            vertical-align top
+            vertical-align middle
             line-height 18px
             letter-spacing 1px
-            font-size 16px
+            font-size 20px
             color #fff
           .star
             display inline-block
-            vertical-align top
+            vertical-align middle
             margin 0 12px
           .score
             display inline-block
@@ -126,16 +132,17 @@
         display inline-block
         vertical-align top
         background #fff
-        padding 8px 16px
+        padding 5px 8px
         border-radius 5px
         .text-top
           color #ff4565
           margin-bottom 2px
-          font-size 18px
+          font-size 16px
         .text-bottom
           color #ff4486
-          font-size 22px
+          font-size 20px
           font-weight 700
+          text-align center
         .triangle
           position absolute
           top 50%
@@ -148,4 +155,10 @@
         display inline-block
         vertical-align top
         margin-left 30px
+        .img
+          width 90px
+          height 90px
+          @media (-webkit-max-device-pixel-ratio: 1.9),(max-device-pixel-ratio: 1.9)
+            width 60px
+            height 60px
 </style>
