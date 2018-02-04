@@ -97,8 +97,8 @@
         .nickname
           display block
           margin 4% auto 0
-          font-size 14px
-          color #000
+          font-size 18px
+          color #fff
       .score-box
         margin-top 10%
         @media (-webkit-max-device-pixel-ratio: 1.8),(max-device-pixel-ratio: 1.8)
