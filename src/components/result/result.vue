@@ -28,6 +28,8 @@
             <!--<span class="score">{{animal.treasure}}</span>-->
           </div>
         </div>
+        <!--评语-->
+        <p class="comment">{{animal.comment}}</p>
       </div>
       <!--二维码-->
       <div class="code-wrapper">
@@ -81,10 +83,10 @@
       background-size 100% 100%
       overflow hidden
       .header
-        margin-top 12%
+        margin-top 10%
         @media (-webkit-max-device-pixel-ratio: 2),(max-device-pixel-ratio: 2)
-          margin-top 8%
-        margin-bottom 8%
+          margin-top 6%
+        margin-bottom 6%
         text-align center
         .text
           font-size 20px
@@ -100,11 +102,11 @@
           font-size 18px
           color #fff
       .score-box
-        margin-top 10%
+        margin-top 6%
         @media (-webkit-max-device-pixel-ratio: 1.8),(max-device-pixel-ratio: 1.8)
           margin-top 5%
         .score-wrapper
-          margin-bottom 20px
+          margin-bottom 15px
           text-align center
           font-size 0
           .title
@@ -124,6 +126,13 @@
             line-height 18px
             font-size 12px
             color rgb(255, 153, 0)
+      .comment
+        margin-top 8%
+        text-align center
+        font-size 20px
+        color #fff
+        font-family '楷体'
+        font-weight 700
     .code-wrapper
       width 80%
       margin 0 auto
