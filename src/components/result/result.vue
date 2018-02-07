@@ -11,7 +11,8 @@
           <span class="nickname">{{username}}</span>
         </div>
         <!--分数展示-->
-        <div class="score-box">
+        <transition name="fly">
+        <div class="score-box" v-show="showFlag">
           <div class="score-wrapper">
             <span class="title">感情旺 : </span>
             <v-star class="star" :size="48" :length="5" :score="animal.emotion"></v-star>
@@ -28,6 +29,7 @@
             <!--<span class="score">{{animal.treasure}}</span>-->
           </div>
         </div>
+        </transition>
         <!--评语-->
         <p class="comment">{{animal.comment}}</p>
       </div>
@@ -51,6 +53,14 @@
   import Star from 'base/star/star'
 
   export default {
+    data() {
+      return {
+        showFlag: false
+      }
+    },
+    mounted() {
+      this.showFlag = true
+    },
     computed: {
       ...mapGetters([
         'animal',
@@ -105,6 +115,11 @@
         margin-top 6%
         @media (-webkit-max-device-pixel-ratio: 1.8),(max-device-pixel-ratio: 1.8)
           margin-top 5%
+        &.fly-enter-active, &.fly-leave-active
+          transition all 0.6s cubic-bezier(.51,.92,.65,1.8)
+        &.fly-enter, &.fly-leave-to
+          transform scale(0.5)
+          opacity 0
         .score-wrapper
           margin-bottom 15px
           text-align center

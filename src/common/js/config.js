@@ -21,7 +21,7 @@ export const animals = [
     emotion: 4,
     career: 4,
     treasure: 4,
-    comment: '三号学生，发展均衡'
+    comment: '三好学生，发展均衡'
   },
   {
     text: '兔',
