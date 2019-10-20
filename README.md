@@ -1,6 +1,6 @@
 # augur
 
-> augur page
+> augur page （测运势）
 
 ## Build Setup
 
